@@ -1,11 +1,13 @@
+import {IMG_URL} from "../utils/constants"
+
 const RestaurantCard = ({resData}) => {
-    const {resName, cuisine, stars, img} = resData
+    const {name, cuisines, avgRating, cloudinaryImageId} = resData
     return (
      <div className="rest-cards">
-         <img className="rest-logo" alt="food-img" src={img}/>
-         <h2>{resName}</h2>
-         <h4>{cuisine}</h4>
-         <h3>{stars}</h3>
+         <img className="rest-logo" alt="food-img" src={IMG_URL+"/"+cloudinaryImageId}/>
+         <h2>{name}</h2>
+         <h4>{cuisines}</h4>
+         <h3>{avgRating}</h3>
      </div>
     )
  }
