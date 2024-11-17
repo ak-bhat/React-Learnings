@@ -45,3 +45,17 @@
 .rest-logo{
     width: 100%;
 }
+
+.log-btn{
+    cursor: pointer;
+}
+
+.filter{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn-search{
+    margin: 10px;
+    cursor: pointer;
+}

@@ -6,7 +6,7 @@ const RestaurantCard = ({resData}) => {
      <div className="rest-cards">
          <img className="rest-logo" alt="food-img" src={IMG_URL+"/"+cloudinaryImageId}/>
          <h2>{name}</h2>
-         <h4>{cuisines}</h4>
+         <h4>{cuisines.join(",")}</h4>
          <h3>{avgRating}</h3>
      </div>
     )
