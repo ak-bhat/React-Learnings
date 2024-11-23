@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard"
-
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import useOnlineStatus from "../utils/useOnlineStatus"
 
 const Body = () => {
 
@@ -22,6 +23,11 @@ const Body = () => {
         setListRestaurants(data.data.cards.slice(3,16).map(card => card.card.card.info))
         setFilteredRestaurants(data.data.cards.slice(3,16).map(card => card.card.card.info))
     }
+
+    const onlineStatus = useOnlineStatus();
+
+
+    if(onlineStatus===false)return (<h1>Please check your Network</h1>);
 
 
     return (
@@ -48,7 +54,7 @@ const Body = () => {
                 
             <div className="res-container">
                 {filteredRestaurants.map(restaurant =>
-                    <RestaurantCard key={restaurant.id} resData={restaurant}/>
+                    <Link to={"/restaurants/"+restaurant.id}><RestaurantCard key={restaurant.id} resData={restaurant}/></Link>
                 )}      
             </div>
         </div>
