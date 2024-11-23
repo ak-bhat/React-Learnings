@@ -20,13 +20,13 @@ const RestaurantMenu = () => {
     
 
     return (
-        <div className="menu">
-            <h1>{name}</h1>
-            <p>{cuisines.join(",")} - {costForTwoMessage}</p>
+        <div className="m-4 p-4">
+            <h1 className="font-bold py-4 text-lg">{name}</h1>
+            <p className="text-lg">{cuisines.join(",")} - {costForTwoMessage}</p>
 
-            <h2>Menu</h2>
+            <h2 className="font-bold">Menu</h2>
             <ul>
-                <li>{itemCards.map((item)=><li key={item.card.info.name.id}>{item.card.info.name}- RS.{item.card.info.price/100}</li>)}</li>
+                <li className="list-disc">{itemCards.map((item)=><li key={item.card.info.name.id}>{item.card.info.name}- RS.{item.card.info.price/100}</li>)}</li>
             </ul>
         </div>
     )

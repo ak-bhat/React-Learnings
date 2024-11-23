@@ -32,27 +32,30 @@ const Body = () => {
 
     return (
         <div className="body">
-            <div className="filter">
-                <div className="search">
-                    <input type="input" className="search-box" value={searchText} 
+            <div className="filter flex">
+                <div className="m-4">
+                    <input type="text" className="border border-solid border-black" value={searchText} 
                     onChange={
                         (e)=>{setSearchText(e.target.value)}}>
                         </input>
-                    <button className="btn-search" onClick={()=>{
+                    <button className="px-4 py-2 bg-green-100 m-4 rounded-lg" onClick={()=>{
                             const filteredRes = listRestaurants.filter(resName=>
                                 resName.name.toLowerCase().includes(searchText.toLowerCase()))
                                 setFilteredRestaurants(filteredRes)
                             
                         }}>Search</button>
                 </div>
-                <button className="filter-btn" 
-                onClick={ () =>{
-                    const filteredData = listRestaurants.filter(res=> res.avgRating > 4.5);
-                    setListRestaurants(filteredData);
-                }}>Top Rated Restaurants</button>
+                <div className="m-4 p-4"> 
+                    <button className="px-2 p-2 bg-gray-100 rounded-lg" 
+                        onClick={ () =>{
+                            const filteredData = listRestaurants.filter(res=> res.avgRating > 4.5);
+                            setListRestaurants(filteredData);
+                        }}>Top Rated Restaurants</button>
+                </div>
+                
             </div>
                 
-            <div className="res-container">
+            <div className="flex flex-wrap rounded-lg">
                 {filteredRestaurants.map(restaurant =>
                     <Link to={"/restaurants/"+restaurant.id}><RestaurantCard key={restaurant.id} resData={restaurant}/></Link>
                 )}      
