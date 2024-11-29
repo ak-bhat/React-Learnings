@@ -29,7 +29,7 @@ const RestaurantMenu = () => {
         {cuisines.join(",")} - {costForTwoMessage}
       </p>
       {categories.map((category)=>
-        <RestaurantCategory data={category.card.card}/>
+        <RestaurantCategory key={category?.card?.card.title} data={category?.card?.card}/>
       )}
     </div>
   );
