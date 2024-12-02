@@ -1,7 +1,8 @@
 import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/userContext";
 
 const Body = () => {
   const [listRestaurants, setListRestaurants] = useState([]);
@@ -35,6 +36,8 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
 
   if (onlineStatus === false) return <h1>Please check your Network</h1>;
+
+  const {loggedInUser, setUserName} = useContext(UserContext)
 
   return (
     <div className="body">
@@ -73,6 +76,9 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
+        <div className="m-4 p-4">
+            <input type="text" className="border border-solid border-black" value={loggedInUser} onChange={(e)=>setUserName(e.target.value)}></input>
+        </div>
       </div>
 
       <div className="flex flex-wrap rounded-lg">
@@ -82,8 +88,8 @@ const Body = () => {
                 restaurant.promoted === true ? <RestaurantCardPromoted resData={restaurant}/> : <RestaurantCard key={restaurant.id} resData={restaurant} />
 
             }
-          </Link>
-        ))}
+          </Link> 
+        ))} 
       </div>
     </div>
   );

@@ -1,16 +1,19 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestaurantCategory = ({data}) => {
+const RestaurantCategory = ({data, showItems, setShowIndex}) => {
 // console.log(data);
 
-    const [showItems, setShowItems] = useState(false)
+    // const [showItems, setShowItems] = useState(false)
 
     const handleClick = () =>{
-        setShowItems(!showItems)
-        //Toggle feature with Same logic - showItems?setShowItems(false):setShowItems(true)
+
+        setShowIndex()
+
+    //     setShowItems(!showItems)
+    //Toggle feature with Same logic - showItems?setShowItems(false):setShowItems(true)
+    // console.log(showItems);  Old Logic
     }
-    // console.log(showItems);
     
 
     return(
