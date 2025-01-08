@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearCart, removeItem } from "../utils/cartSlice";
 
 const Cart = () => {
-  const items = useSelector((store) => store.cart.items);
+  const items = useSelector((store) => store.cart.items);  // Subscribe to the store
 
   const dispatch = useDispatch();
 
