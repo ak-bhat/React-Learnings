@@ -1,6 +1,8 @@
 import {IMG_URL} from "../utils/constants"
 
 const RestaurantCard = ({resData}) => {
+    console.log(resData);
+    
     const {name, cuisines, avgRating, cloudinaryImageId} = resData
     return (
      <div className="m-4 p-4 w-[250px] bg-red-300 hover:bg-red-600">

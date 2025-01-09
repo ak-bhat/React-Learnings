@@ -1,0 +1,76 @@
+{
+    "id": "753881",
+    "name": "Sukrutham Catering",
+    "cloudinaryImageId": "6a2e4f13a9e4f67622d82c04ab8bf0cd",
+    "locality": "a m thomas road",
+    "areaName": "Panampilly Nagar",
+    "costForTwo": "₹500 for two",
+    "cuisines": [
+        "South Indian",
+        "Indian",
+        "Chaat",
+        "Beverages"
+    ],
+    "avgRating": 4.7,
+    "veg": true,
+    "parentId": "445777",
+    "avgRatingString": "4.7",
+    "totalRatingsString": "2.8K+",
+    "promoted": true,
+    "adTrackingId": "cid=23316899~p=0~adgrpid=23316899#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=753881~eid=c9c71a0e-0d49-44b9-b585-43a857cae6a1~srvts=1736420390444~collid=80424",
+    "sla": {
+        "deliveryTime": 44,
+        "lastMileTravel": 8.3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "40-45 mins",
+        "lastMileTravelString": "8.3 km",
+        "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+        "nextCloseTime": "2025-01-09 20:45:00",
+        "opened": true
+    },
+    "badges": {},
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+        "entityBadges": {
+            "textExtendedBadges": {},
+            "textBased": {},
+            "imageBased": {}
+        }
+    },
+    "aggregatedDiscountInfoV3": {
+        "header": "₹50 OFF",
+        "subHeader": "ABOVE ₹299",
+        "discountTag": "FLAT DEAL",
+        "logoCtx": {
+            "text": "BENEFITS"
+        }
+    },
+    "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {},
+        "commsStyling": {}
+    },
+    "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+        }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {},
+    "externalRatings": {
+        "aggregatedRating": {
+            "rating": "--"
+        }
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    "campaignId": "23316899"
+}
