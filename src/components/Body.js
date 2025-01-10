@@ -22,9 +22,7 @@ const Body = () => {
     );
 
     const data = await response.json();
-    console.log(
-      data.data.cards.slice(3, 16).map((card) => card.card.card.info)
-    );
+
     setListRestaurants(
       data.data.cards.slice(3, 16).map((card) => card.card.card.info)
     );

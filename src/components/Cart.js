@@ -17,7 +17,7 @@ const Cart = () => {
 
   return items.length !== 0 ? (
     <div>
-      <div>
+      <div data-testid="cartList">
         {items.map((item, index) => (
           <div
             key={item.card.info.id}
